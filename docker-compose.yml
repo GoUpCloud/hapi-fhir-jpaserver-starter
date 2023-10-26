@@ -28,19 +28,5 @@ services:
 configs:
   hapi:
      file: ./hapi.application.yaml
-     hapi-extra-classes:
-        file: ./hapi-extra-classes
-     fhir:
-        custom-bean-packages: src.main.java.ca.uhn.fhir.jpa.starter.common.validation
-        custom-interceptor-classes: src.main.java.ca.uhn.fhir.jpa.starter.common.validation.RepositoryValidationInterceptorFactoryDstu3
-
-spring:
-  datasource:
-    url: 'jdbc:postgresql://db:5432/hapi'
-    username: admin
-    password: admin
-    driverClassName: org.postgresql.Driver
-  jpa:
-    properties:
-      hibernate.dialect: ca.uhn.fhir.jpa.model.dialect.HapiFhirPostgres94Dialect
-      hibernate.search.enabled: false
+  hapi-extra-classes:
+     file: ./hapi-extra-classes
