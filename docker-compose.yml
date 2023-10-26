@@ -30,3 +30,18 @@ configs:
      file: ./hapi.application.yaml
   hapi-extra-classes:
      file: ./hapi-extra-classes
+
+spring:
+  datasource:
+    url: 'jdbc:postgresql://db:5432/hapi'
+    username: admin
+    password: admin
+    driverClassName: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate.dialect: ca.uhn.fhir.jpa.model.dialect.HapiFhirPostgres94Dialect
+      hibernate.search.enabled: false
+hapi:
+  fhir:
+    custom-bean-packages: the.package.containing.your.interceptor
+    custom-interceptor-classes: the.package.containing.your.interceptor.YourInterceptor
