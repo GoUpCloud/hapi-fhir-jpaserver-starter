@@ -41,8 +41,7 @@ spring:
     properties:
       hibernate.dialect: ca.uhn.fhir.jpa.model.dialect.HapiFhirPostgres94Dialect
       hibernate.search.enabled: false
-hapi:
-  fhir:
+
 hapi:
   fhir:
     custom-bean-packages: src.main.java.ca.uhn.fhir.jpa.starter.common.validation
