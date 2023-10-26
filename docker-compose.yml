@@ -31,7 +31,10 @@ configs:
   hapi-extra-classes:
     file: ./hapi-extra-classes
 
-spring:
+  fhir:
+    custom-bean-packages: src.main.java.ca.uhn.fhir.jpa.starter.common.validation
+    custom-interceptor-classes: src.main.java.ca.uhn.fhir.jpa.starter.common.validation.RepositoryValidationInterceptorFactoryDstu3
+
   datasource:
     url: 'jdbc:postgresql://db:5432/hapi'
     username: admin
@@ -41,6 +44,3 @@ spring:
     properties:
       hibernate.dialect: ca.uhn.fhir.jpa.model.dialect.HapiFhirPostgres94Dialect
       hibernate.search.enabled: false
-  fhir:
-    custom-bean-packages: src.main.java.ca.uhn.fhir.jpa.starter.common.validation
-    custom-interceptor-classes: src.main.java.ca.uhn.fhir.jpa.starter.common.validation.RepositoryValidationInterceptorFactoryDstu3
