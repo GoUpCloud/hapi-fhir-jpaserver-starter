@@ -43,5 +43,8 @@ spring:
       hibernate.search.enabled: false
 hapi:
   fhir:
-    custom-bean-packages: the.package.containing.your.interceptor
-    custom-interceptor-classes: the.package.containing.your.interceptor.YourInterceptor
+hapi:
+  fhir:
+    custom-bean-packages: src.main.java.ca.uhn.fhir.jpa.starter.common.validation
+    custom-interceptor-classes: src.main.java.ca.uhn.fhir.jpa.starter.common.validation.RepositoryValidationInterceptorFactoryDstu3
+
