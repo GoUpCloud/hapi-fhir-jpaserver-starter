@@ -28,11 +28,11 @@ services:
 configs:
   hapi:
      file: ./hapi.application.yaml
-  hapi-extra-classes:
-     file: ./hapi-extra-classes
-   fhir:
- custom-bean-packages: src.main.java.ca.uhn.fhir.jpa.starter.common.validation
-    custom-interceptor-classes: src.main.java.ca.uhn.fhir.jpa.starter.common.validation.RepositoryValidationInterceptorFactoryDstu3
+     hapi-extra-classes:
+        file: ./hapi-extra-classes
+     fhir:
+        custom-bean-packages: src.main.java.ca.uhn.fhir.jpa.starter.common.validation
+        custom-interceptor-classes: src.main.java.ca.uhn.fhir.jpa.starter.common.validation.RepositoryValidationInterceptorFactoryDstu3
 
 spring:
   datasource:
@@ -44,5 +44,3 @@ spring:
     properties:
       hibernate.dialect: ca.uhn.fhir.jpa.model.dialect.HapiFhirPostgres94Dialect
       hibernate.search.enabled: false
-
-  
